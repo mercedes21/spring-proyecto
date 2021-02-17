@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Día dos</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+            /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+            .row.content {height: 1500px}
+
+            /* Set gray background color and 100% height */
+            .sidenav {
+                background-color: #f1f1f1;
+                height: 100%;
+            }
+
+            /* Set black background color, white text and some padding */
+            footer {
+                background-color: #555;
+                color: white;
+                padding: 15px;
+            }
+
+            /* On small screens, set height to 'auto' for sidenav and grid */
+            @media screen and (max-width: 767px) {
+                .sidenav {
+                    height: auto;
+                    padding: 15px;
+                }
+                .row.content {height: auto;} 
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row content">
+                <div class="col-sm-3 sidenav">
+                    <h4>Advento of Code</h4>
+                    <ul class="nav nav-pills nav-stacked">
+                        <li class="active"><a href="inicio.html">Inicio</a></li>
+                        <li class="active"><a href="diaUno.html">Día uno</a></li>
+                    </ul><br>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search Blog..">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-sm-9">
+                    <h4><small>DIA DOS</small></h4>
+                    <hr>
+                    <h2>Parte uno</h2>
+                    <h5><span class="glyphicon glyphicon-time"></span> Febrero 10,2021.</h5>
+                    <p> paquete  adventoofcode ;
+
+                        <br>import  java.io.BufferedReader ;
+                        <br>import  java.io.FileNotFoundException ;
+                        <br>import  java.io.FileReader ;
+                        <br>import  java.io.IOException ;
+                        <br>import  java.util.Arrays ;
+                        <br>public  class  AdventoDiaDos {
+                        <br>public  static  void  main ( String [] args ) lanza  IOException {
+                        <br>muestraConDiaDos ( " /Usuarios/chapis/Documents/diaDos.txt " );
+                        <br>}
+                        <br>public  static  void  muestraConDiaDos ( String  archivo ) lanza  FileNotFoundException , IOException {
+                        <br>Medidas de cuerda ;
+                        <br>FileReader f =  nuevo  FileReader (archivo);
+                        <br>BufferedReader b =  nuevo  BufferedReader (f);
+                        <br>int suma =  0 ;
+                        <br>int sumaMenor =  0 ;
+                        <br>int total =  0 ;
+                        <br>while ((medidas = b . readLine ()) ! =  null ) {
+                        <br>Cadena [] separador = medidas . dividir ( " x " );
+                        <br>int l =  Entero . parseInt (separador [ 0 ]);
+                        <br>int w =  Entero . parseInt (separador [ 1 ]);
+                        <br>int h =  Entero . parseInt (separador [ 2 ]);
+                        <br>int largo = l * w;
+                        <br>int ancho = w * h;
+                        <br>int alto = h * l;
+                        <br>int menor =  0 ;
+                        <br>if (largo < ancho && largo < alto) {
+                        <br>menor = largo;
+                        <br>} else  if (ancho < largo && ancho < alto) {
+                        <br>menor = ancho;
+                        <br>} else  if (alto < largo && alto < ancho) {
+                        <br>menor = alto;
+                        <br>} else  if (largo == ancho && ancho < alto || largo == ancho && alto < ancho || largo == ancho && largo < alto || largo == ancho && ancho < largo || largo == ancho && largo < ancho) {
+                        <br>menor = ancho;
+                        <br>} else  if (alto == ancho && ancho < alto || alto == ancho && alto < ancho || alto == ancho && largo < alto || alto == ancho && ancho < largo || alto == ancho && largo < ancho) {
+                        <br>menor = alto;
+                        <br>} else  if (largo == alto && ancho < alto || largo == alto && alto < ancho || largo == alto && largo < alto || largo == alto && ancho < largo || largo == alto && largo < ancho) {
+                        <br>menor = largo;
+                        <br>} else  if (largo == ancho || largo == alto || ancho == largo || ancho == alto) {
+                        <br>menor = largo;
+                        <br>} más {
+                        <br>}
+                        <br>int largof = largo *  2 ;
+                        <br>int anchof = ancho *  2 ;
+                        <br>int altof = alto *  2 ;
+                        <br>sumaMenor + = menor;
+                        <br>suma + = largof + anchof + altof;
+                        <br>}
+                        <br>total = sumaMenor + suma;
+                        <br>Sistema . fuera . println ( " total   "  + total);
+                        <br>}
+                        <br>}
+                    </p>
+                    <br>
+                    <h4><small>Advento 2015</small></h4>
+                    <hr>
+                    <h2>Parte dos</h2>
+                    <h5><span class="glyphicon glyphicon-time"></span> Febrero 10,2021.</h5>
+                    <p>
+                        <br>package adventoofcode;
+                        <br>import java.io.BufferedReader;
+                        <br>import java.io.FileNotFoundException;
+                        <br>import java.io.FileReader;
+                        <br>import java.io.IOException;
+                        <br>import java.lang.reflect.Array;
+                        <br>import java.util.Arrays;
+                        <br>import java.util.Collections;
+                        <br>public class AdventoDiaDos {
+                        <br>public static void main(String[] args) throws IOException {
+                        <br> muestraConDiaDos("/Users/chapis/Documents/diaDos.txt");
+                        <br>}
+                        <br>public static void muestraConDiaDos(String archivo) throws FileNotFoundException, IOException {
+                        <br>String medidas;
+                        <br>FileReader f = new FileReader(archivo);
+                        <br>BufferedReader b = new BufferedReader(f);
+                        <br>int x = 0;
+                        <br>while ((medidas = b.readLine()) != null) {
+                        <br>int[] a = Arrays.stream(medidas.split("x")).mapToInt(Integer::parseInt).toArray();
+                        <br>Arrays.sort(a);
+                        <br>int c1 = a[0];
+                        <br>int c2 = a[1];
+                        <br>int c3 = a[2];
+                        i<br>nt lado1 = a[0] * 2;
+                        <br>int lado2 = a[1] * 2;
+                        <br>int suma = lado1 + lado2;
+                        <br>int suma2 = c1 * c2 * c3;
+                        <br>int total = suma + suma2;
+                        <br>x += total;
+                        <br>}
+                        <br>System.out.println("El total de pies es: " + x);
+                        <br>}
+                        <br>}
+                    </p>
+                    <hr>
+                </div>
+            </div>
+    </body>
+</html>
+

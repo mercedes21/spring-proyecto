@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Día uno</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+            /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+            .row.content {height: 1500px}
+
+            /* Set gray background color and 100% height */
+            .sidenav {
+                background-color: #f1f1f1;
+                height: 100%;
+            }
+
+            /* Set black background color, white text and some padding */
+            footer {
+                background-color: #555;
+                color: white;
+                padding: 15px;
+            }
+
+            /* On small screens, set height to 'auto' for sidenav and grid */
+            @media screen and (max-width: 767px) {
+                .sidenav {
+                    height: auto;
+                    padding: 15px;
+                }
+                .row.content {height: auto;} 
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row content">
+                <div class="col-sm-3 sidenav">
+                    <h4>Advento of Code</h4>
+                    <ul class="nav nav-pills nav-stacked">
+                        <li class="active"><a href="inicio.html">Inicio</a></li>
+                        <li class="active"><a href="DiaDos.html">Día dos</a></li>
+                    </ul>
+                    <br>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search Blog..">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-sm-9">
+                    <h4><small>DIA UNO</small></h4>
+                    <hr>
+                    <h2>Parte uno</h2>
+                    <h5><span class="glyphicon glyphicon-time"></span> Febrero 10,2021.</h5>
+                    <p> package adventoofcode;
+                        <br>
+                        import java.awt.Desktop;
+                        <br>
+                        import java.io.BufferedReader;
+                        <br>
+                        import java.io.File;
+                        <br>
+                        import java.io.FileNotFoundException;
+                        <br>
+                        import java.io.FileReader;
+                        <br>
+                        import java.io.IOException;
+                        <br>
+                        import java.util.Arrays;
+                        <br>
+
+                        public class AdventoOfCode {
+                        <br>
+                        public static void main(String[] args) throws IOException {
+                        <br>
+                        muestraContenido("/Users/chapis/Documents/input.txt");
+                        <br>
+                        }
+                        <br>
+                        public static void muestraContenido(String archivo) throws FileNotFoundException, IOException {
+                        <br>
+                        String cadena;
+                        <br>
+                        FileReader f = new FileReader(archivo);
+                        <br>
+                        BufferedReader b = new BufferedReader(f);
+                        <br>
+                        while ((cadena = b.readLine()) != null) {
+                        <br>
+                        String[] parts = cadena.split("");
+                        <br>
+                        int floor = 0;
+                        <br>
+                        for (int i = 0; i < parts.length; i++) {
+                        <br>
+                        if (parts[i].equals("(")) {
+                        <br>
+                        floor += 1;
+                        <br>
+                        } else {
+                        <br>
+                        floor -= 1;
+                        <br>
+                        }
+                        <br>
+                        }
+                        <br>
+                        System.out.println("El resultado final es " + floor);
+                        <br>
+                        }
+                        <br>
+                        b.close();
+                        <br>
+                        }
+                        <br>
+                        }</p>
+                    <br>
+                    <h4><small>Advento 2015</small></h4>
+                    <hr>
+                    <h2>Parte dos</h2>
+                    <h5><span class="glyphicon glyphicon-time"></span> Febrero 10,2021.</h5>
+                    <p>package adventoofcode;
+                        <br>import java.awt.Desktop;
+                        <br>import java.io.BufferedReader;
+                        <br>import java.io.File;
+                        <br>import java.io.FileNotFoundException;
+                        <br>import java.io.FileReader;
+                        <br>import java.io.IOException;
+                        <br>import java.util.Arrays;
+                        <br>
+                        public class AdventoOfCode {
+                        <br>public static void main(String[] args) throws IOException {
+                        <br>muestraContenido("/Users/chapis/Documents/inputPartDos.txt");
+                        <br>}
+                        <br>public static void muestraContenido(String archivo) throws FileNotFoundException, IOException {
+                        <br>String cadena;
+                        <br>FileReader f = new FileReader(archivo);
+                        <br>BufferedReader b = new BufferedReader(f);
+                        <br>while ((cadena = b.readLine()) != null) {
+                        <br>String[] parts = cadena.split("");
+                        <br>int floor = 0;
+                        <br>int pos=0;
+                        <br>for (int i = 0; i < parts.length; i++) {
+                        <br>if (parts[i].equals("(")) {
+                        <br>floor += 1;
+                        <br>} else {
+                        <br>pos=i + 1;
+                        <br>floor -= 1;
+                        <br>if(floor == -1){
+                        <br>System.out.println("posicion "+ pos);
+                        <br>break;
+                        <br>}
+                        <br>}
+                        <br>}
+                        <br>System.out.println("El resultado final es " + floor);
+                        <br>}
+                        <br>b.close();
+                        <br> }
+                        <br>}</p>
+                    <hr>
+                </div>
+            </div>
+    </body>
+</html>
